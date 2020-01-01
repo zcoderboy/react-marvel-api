@@ -15,4 +15,5 @@ function sendRequest(url, method, xhr = new XMLHttpRequest()) {
     xhr.send();
   });
 }
+
 export { sendRequest };
