@@ -1,0 +1,6 @@
+.comic {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 21%;
+  border-radius: 20px;
+}
