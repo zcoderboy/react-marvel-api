@@ -7,9 +7,11 @@ import MarvelService from "./services/MarvelService";
 const App = () => {
   const [comics, setComics] = useState([]);
   useEffect(() => {
-    MarvelService.getComics().then(data => {
-      setComics(data);
-    });
+    async function fetchData() {
+      let datas = await MarvelService.getComics();
+      setComics(datas);
+    }
+    fetchData();
   }, [setComics]);
   return (
     <div className="container mt-3">
