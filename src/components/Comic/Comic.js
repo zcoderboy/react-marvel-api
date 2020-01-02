@@ -3,9 +3,9 @@ import "./Comic.css";
 
 export default function Comic({ comic }) {
   return (
-    <div className="card comic shadow mr-3 mb-5">
+    <div className="carousel-cell card comic mb-5">
       <img
-        src={comic.thumbnail.path + "/portrait_incredible.jpg"}
+        src={comic.thumbnail.path + "/portrait_uncanny.jpg"}
         className="card-img-top comic-img"
         alt="..."
       />
