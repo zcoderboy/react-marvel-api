@@ -1,5 +1,26 @@
+body {
+  background-color: var(--background);
+  color: var(--color);
+  transition: 0.4s;
+}
+
+body.dark {
+  --background: #20262e;
+  --color: #fff;
+  --border-color: #fff;
+  --border-size: 0.05px;
+}
+
+body.light {
+  --background: #fff;
+  --color: #20262e;
+  --border-color: rgba(0, 0, 0, 0.125);
+  --border-size: 1px;
+}
+
 .wrapper {
   width: 90vw;
+  height: 100vh;
   margin: auto;
 }
 

@@ -9,21 +9,31 @@ const MarvelService = {
       "GET"
     );
   },
-  getCharacterByID: ID => {
+  getCharacter: resource => {
     return sendRequest(
-      `${BASE_URL}/characters/${ID}?apikey=46adc9b9781ce41307cb74b00a292648`,
+      `${resource}?apikey=46adc9b9781ce41307cb74b00a292648`,
       "GET"
     );
   },
-  getComicsOfCharacter: ID => {
-    return sendRequest(
-      `${BASE_URL}/characters/${ID}/comics?apikey=46adc9b9781ce41307cb74b00a292648`,
-      "GET"
-    );
+  getCharactersOfComic: characterArray => {
+    return new Promise((resolve, reject) => {
+      let characters = [];
+      characterArray.forEach(async item => {
+        let character = await MarvelService.getCharacter(item.resourceURI);
+        characters.push(character[0]);
+      });
+      characters ? resolve(characters) : reject("An error occured...");
+    });
   },
   getComics: () => {
     return sendRequest(
       `${BASE_URL}/comics?format=comic&dateRange=2010-01-01%2C2019-01-01&apikey=46adc9b9781ce41307cb74b00a292648`,
+      "GET"
+    );
+  },
+  getComic: id => {
+    return sendRequest(
+      `${BASE_URL}/comics/${id}?apikey=46adc9b9781ce41307cb74b00a292648`,
       "GET"
     );
   }

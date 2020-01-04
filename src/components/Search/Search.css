@@ -1,5 +1,11 @@
 .search {
   border-radius: unset;
+  background-color: var(--background);
+  color: var(--color);
+}
+.search:focus {
+  background-color: var(--background);
+  color: var(--color);
 }
 
 .btn-search {

@@ -1,0 +1,32 @@
+.toggler {
+  border-radius: 10px;
+  width: 2.2rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+.toggler::after {
+  content: "";
+  padding: 8px;
+  background-color: #fff;
+  position: relative;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  top: 0.12rem;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.toggle-light {
+  background-color: dodgerblue;
+}
+
+.toggle-dark {
+  background-color: #000;
+}
+.toggle-light::after {
+  left: 0.145rem;
+}
+.toggle-dark::after {
+  left: 1.0625rem;
+}

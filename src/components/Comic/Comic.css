@@ -1,3 +1,16 @@
 .comic {
+  border: var(--border-size) solid var(--border-color);
   border-radius: 20px;
+}
+
+.comic-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.comic-info {
+  background-color: var(--background);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: 0.4s;
 }

@@ -9,7 +9,7 @@ export default function Comic({ comic }) {
         className="card-img-top comic-img"
         alt="..."
       />
-      <div className="card-body d-flex flex-column justify-content-around">
+      <div className="card-body comic-info d-flex flex-column justify-content-around">
         <h6 className="card-title comic-title text-center font-weight-bold">
           {comic.title.split("(")[0]}
         </h6>
