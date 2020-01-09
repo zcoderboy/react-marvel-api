@@ -21,7 +21,7 @@ const ComicDetails = ({ title, image, pageCount, price, characters }) => {
           <div>
             <h5>Characters</h5>
             <div className="d-flex">
-              {console.log(characters)}
+              {/* {console.log(characters)} */}
               <span key={characters[0].id}>{characters[0].name}</span>
               {characters.map(character => (
                 <span key={character.id}>{character.name}</span>

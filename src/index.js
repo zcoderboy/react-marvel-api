@@ -15,7 +15,7 @@ const routes = mount({
     let characters = await MarvelService.getCharactersOfComic(
       comic[0].characters.items
     );
-    console.log(characters);
+    // console.log(characters);
     return {
       view: (
         <ComicDetails

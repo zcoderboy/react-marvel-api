@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./Toggler.css";
 
-const Toggler = () => {
-  const [mode, changeMode] = useMode("light");
+const Toggler = ({ defaultMode }) => {
+  const [mode, changeMode] = useMode(defaultMode);
   return (
-    <div>
-      <div
-        className={`toggler toggle-${mode}`}
-        onClick={changeMode}
-        onKeyPress={changeMode}
-        role="button"
-        tabIndex="0"
-      ></div>
-    </div>
+    <div
+      className={`toggler toggle-${mode}`}
+      onClick={changeMode}
+      onKeyPress={changeMode}
+      role="button"
+      tabIndex="0"
+    ></div>
   );
 };
 
@@ -34,7 +32,12 @@ function useMode(defaultMode) {
   useEffect(() => {
     const currentMode = localStorage.getItem("mode");
     document.body.classList.add(currentMode);
-    currentMode ? setMode(currentMode) : "";
+    if (currentMode) {
+      setMode(currentMode);
+    } else {
+      setMode(defaultMode);
+      document.body.classList.add(defaultMode);
+    }
     return () => {};
   }, []);
   return [mode, changeMode];
