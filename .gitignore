@@ -4,5 +4,6 @@ coverage/
 .vscode/ 
 .cache/
 .history
+.idea
 node_modules/
 dist/
