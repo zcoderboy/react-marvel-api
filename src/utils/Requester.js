@@ -6,7 +6,8 @@ function callback(xhr, resolve, reject) {
   }
 }
 
-function sendRequest(url, method, xhr = new XMLHttpRequest()) {
+function sendRequest(url, method) {
+  let xhr = new XMLHttpRequest();
   return new Promise((resolve, reject) => {
     xhr.open(method, url, true);
     xhr.onreadystatechange = () => {

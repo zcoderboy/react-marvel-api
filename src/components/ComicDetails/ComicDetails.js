@@ -1,33 +1,50 @@
 import React from "react";
 import Search from "../Search/Search";
 import "./ComicDetails.css";
+import Character from "../Character/Character";
+import Toggler from "../Toggler/Toggler";
 
-const ComicDetails = ({ title, image, pageCount, price, characters }) => {
+const ComicDetails = ({
+  title,
+  image,
+  pageCount,
+  price,
+  characters,
+  description
+}) => {
   return (
     <div>
-      <Search />
-      <div className="d-flex mt-4">
+      <div className="d-flex justify-content-between">
+        <Search />
+        <Toggler defaultMode="dark" />
+      </div>
+      <div className="d-flex mt-5">
         <div className="comic-img shadow">
           <img
             src={image + "/portrait_uncanny.jpg"}
-            className="card-img-top comic-img rounded"
+            className="card-img-top comic-img rounded h-100"
             alt="..."
           />
         </div>
-        <div className="mx-5">
-          <h2 className="text-underline">{title.split("(")[0]}</h2>
-          <h4>{pageCount} pages</h4>
-          <h4>{price} $</h4>
-          <div>
-            <h5>Characters</h5>
-            <div className="d-flex">
-              {/* {console.log(characters)} */}
-              <span key={characters[0].id}>{characters[0].name}</span>
-              {characters.map(character => (
-                <span key={character.id}>{character.name}</span>
-              ))}
+        <div className="mx-5 w-100 align-self-center ">
+          <h2 className="text-underline display-3">{title.split("(")[0]}</h2>
+          <h4>
+            {pageCount === 0
+              ? "Number of pages unavailable"
+              : `${pageCount} pages`}
+          </h4>
+          <h4>{price === 0 ? "Price unavailable" : `${price} $`}</h4>
+          <p className="lead my-3">{description}</p>
+          {characters.length !== 0 && (
+            <div className="mt-4">
+              <h5 className="mb-3">Characters</h5>
+              <div className="d-flex">
+                {characters.map(character => (
+                  <Character key={character.id} character={character} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>

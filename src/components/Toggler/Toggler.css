@@ -1,20 +1,21 @@
 .toggler {
   border-radius: 10px;
-  width: 2.2rem;
-  height: 1.25rem;
+  width: 2.5rem;
+  height: 1.3rem;
   cursor: pointer;
 }
 .toggler::after {
   content: "";
-  padding: 8px;
+  padding: 11px;
   background-color: #fff;
   position: relative;
   width: 0.3125rem;
   height: 0.3125rem;
-  top: 0.12rem;
+  top: -1px;
   border-radius: 50%;
   display: inline-block;
   transition: 0.4s;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.45);
 }
 
 .toggle-light {
@@ -22,10 +23,10 @@
 }
 
 .toggle-dark {
-  background-color: #000;
+  background-color: #344658;
 }
 .toggle-light::after {
-  left: 0.145rem;
+  left: -1px;
 }
 .toggle-dark::after {
   left: 1.0625rem;

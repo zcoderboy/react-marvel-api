@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import MarvelService from "../../services/MarvelService";
 import "./Search.css";
+// import ThemeContext from "../../ThemeContext";
 
 const Search = () => {
   const [character, setCharacter] = useState("");
   const [result, setResult] = useState([]);
-
+  // const theme = useContext(ThemeContext);
   useEffect(() => {
     if (character != "") {
       MarvelService.getCharacterByName(character).then(hero => {

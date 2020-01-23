@@ -12,10 +12,12 @@ const routes = mount({
   }),
   "/comic/:id": route(async req => {
     let comic = await MarvelService.getComic(req.params.id);
-    let characters = await MarvelService.getCharactersOfComic(
-      comic[0].characters.items
-    );
-    // console.log(characters);
+    let characters = [];
+    if (comic[0].characters.items.length !== 0) {
+      characters = await MarvelService.getCharactersOfComic(
+        comic[0].characters.items
+      );
+    }
     return {
       view: (
         <ComicDetails
@@ -24,6 +26,7 @@ const routes = mount({
           pageCount={comic[0].pageCount}
           price={comic[0].pageCount}
           characters={characters}
+          description={comic[0].description}
         />
       )
     };
@@ -32,7 +35,8 @@ const routes = mount({
 
 render(
   <Router routes={routes}>
-    <Suspense fallback={null}>
+    <Suspense fallback={"Loading"}>
+      {/* <Toggler /> */}
       <View />
     </Suspense>
   </Router>,

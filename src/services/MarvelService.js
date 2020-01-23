@@ -2,6 +2,12 @@ import { sendRequest } from "../utils/Requester";
 
 const BASE_URL = "https://gateway.marvel.com:443/v1/public";
 
+async function asyncForEach(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    await callback(array[i], i);
+  }
+}
+
 const MarvelService = {
   getCharacterByName: name => {
     return sendRequest(
@@ -18,11 +24,13 @@ const MarvelService = {
   getCharactersOfComic: characterArray => {
     return new Promise((resolve, reject) => {
       let characters = [];
-      characterArray.forEach(async item => {
-        let character = await MarvelService.getCharacter(item.resourceURI);
-        characters.push(character[0]);
-      });
-      characters ? resolve(characters) : reject("An error occured...");
+      (async function() {
+        await asyncForEach(characterArray, async item => {
+          let character = await MarvelService.getCharacter(item.resourceURI);
+          characters.push(character[0]);
+        });
+        characters ? resolve(characters) : reject("An error occured...");
+      })();
     });
   },
   getComics: () => {

@@ -5,7 +5,7 @@ body {
 }
 
 body.dark {
-  --background: #20262e;
+  --background: #101e26;
   --color: #fff;
   --border-color: #fff;
   --border-size: 0.05px;

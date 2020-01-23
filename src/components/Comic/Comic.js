@@ -1,9 +1,21 @@
 import React from "react";
 import "./Comic.css";
+import { useNavigation } from "react-navi";
 
 export default function Comic({ comic }) {
+  const navigation = useNavigation();
   return (
-    <div className="carousel-cell card comic mb-5">
+    <div
+      className="carousel-cell card comic mb-5"
+      onClick={() => {
+        navigation.navigate("/comic/" + comic.id);
+      }}
+      onKeyPress={() => {
+        navigation.navigate("/comic/" + comic.id);
+      }}
+      tabIndex="0"
+      role="button"
+    >
       <img
         src={comic.thumbnail.path + "/portrait_uncanny.jpg"}
         className="card-img-top comic-img"

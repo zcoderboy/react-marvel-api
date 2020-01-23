@@ -4,13 +4,17 @@ import "./Toggler.css";
 const Toggler = ({ defaultMode }) => {
   const [mode, changeMode] = useMode(defaultMode);
   return (
-    <div
-      className={`toggler toggle-${mode}`}
-      onClick={changeMode}
-      onKeyPress={changeMode}
-      role="button"
-      tabIndex="0"
-    ></div>
+    <div className="d-flex align-items-center">
+      <i className="fa fa-sun mr-3" />
+      <div
+        className={`toggler toggle-${mode}`}
+        onClick={changeMode}
+        onKeyPress={changeMode}
+        role="button"
+        tabIndex="0"
+      ></div>
+      <i className="fa fa-moon ml-3" />
+    </div>
   );
 };
 
@@ -39,7 +43,7 @@ function useMode(defaultMode) {
       document.body.classList.add(defaultMode);
     }
     return () => {};
-  }, []);
+  }, [defaultMode]);
   return [mode, changeMode];
 }
 
