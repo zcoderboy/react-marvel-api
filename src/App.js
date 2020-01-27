@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import Comic from "./components/Comic/Comic";
 import MarvelService from "./services/MarvelService";
 import "./App.css";
 import Toggler from "./components/Toggler/Toggler";
-import ThemeContext from "./ThemeContext";
 
 const App = () => {
   const [comics, setComics] = useState([]);
@@ -22,12 +21,17 @@ const App = () => {
     fetchData();
   }, [setComics]);
   return (
-    <ThemeContext.Provider value="dodgerblue">
+    <div>
       <div className="d-flex justify-content-between">
         {/* <Search /> */}
         <Toggler defaultMode="dark" />
       </div>
       <h3 className="text-center mb-4 display-4 display-sm-3">Comic Books</h3>
+      {comics.length == 0 && (
+        <div className="spinner-border position-absolute loader" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      )}
       {comics.length !== 0 && (
         <div
           className="carousel"
@@ -38,7 +42,7 @@ const App = () => {
           ))}
         </div>
       )}
-    </ThemeContext.Provider>
+    </div>
   );
 };
 

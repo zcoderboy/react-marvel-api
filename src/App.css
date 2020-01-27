@@ -39,6 +39,10 @@ body.light {
   transform: scale(1);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
+.loader {
+  top: 30%;
+  left: 50%;
+}
 
 .flickity-page-dots {
   display: none;
