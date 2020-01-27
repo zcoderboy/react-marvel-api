@@ -1,3 +1,37 @@
-.comic-img {
+.comic-img-detail {
   flex-basis: 40%;
+}
+
+@media only screen and (max-width: 480px) {
+  .details-wrapper {
+    flex-direction: column;
+  }
+  .comic-img-detail {
+    align-self: center;
+    width: 80vw;
+    height: 400px;
+  }
+  .display-3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .characters {
+    overflow: scroll;
+  }
+  .characters::-webkit-scrollbar {
+    display: none;
+  }
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    width: 80vw;
+    margin: auto;
+  }
+  .characters-wrapper {
+    width: 80vw;
+    margin: 0 auto;
+  }
 }

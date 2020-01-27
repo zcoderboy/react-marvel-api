@@ -31,3 +31,8 @@
 .toggle-dark::after {
   left: 1.0625rem;
 }
+@media only screen and (max-width: 480px) {
+  .toggler-wrapper {
+    margin-left: 1rem;
+  }
+}

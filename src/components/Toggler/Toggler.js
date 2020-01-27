@@ -4,7 +4,7 @@ import "./Toggler.css";
 const Toggler = ({ defaultMode }) => {
   const [mode, changeMode] = useMode(defaultMode);
   return (
-    <div className="d-flex align-items-center">
+    <div className="d-flex align-items-center toggler-wrapper">
       <i className="fa fa-sun mr-3" />
       <div
         className={`toggler toggle-${mode}`}

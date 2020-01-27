@@ -2,6 +2,7 @@ body {
   background-color: var(--background);
   color: var(--color);
   transition: 0.4s;
+  overflow-y: hidden;
 }
 
 body.dark {
@@ -24,6 +25,10 @@ body.light {
   margin: auto;
 }
 
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
 .carousel-cell {
   width: 20%;
   transition: 0.5s;
@@ -37,4 +42,31 @@ body.light {
 
 .flickity-page-dots {
   display: none;
+}
+.flickity-viewport {
+  height: 100% !important;
+}
+.flickity-prev-next-button {
+  top: 30%;
+  width: 30px;
+  height: 30px;
+}
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    width: 100vw;
+    height: 75vh;
+  }
+  .carousel {
+    height: 75vh;
+  }
+  .carousel-cell {
+    width: 70%;
+  }
+  .flickity-button {
+    display: none;
+  }
+  .display-4 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
 }
