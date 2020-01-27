@@ -15,7 +15,8 @@ const App = () => {
       // eslint-disable-next-line no-undef
       new Flickity(elem, {
         cellAlign: "center",
-        contain: true
+        contain: true,
+        freeScroll: true
       });
     }
     fetchData();
