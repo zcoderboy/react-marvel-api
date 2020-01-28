@@ -31,7 +31,7 @@ body.light {
 
 .carousel-cell {
   width: 20%;
-  transition: 0.5s;
+  transition: 0.4s;
   transform: scale(0.9);
 }
 
