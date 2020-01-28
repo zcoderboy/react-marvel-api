@@ -17,7 +17,9 @@ const MarvelService = {
   },
   getCharacter: resource => {
     return sendRequest(
-      `${resource}?apikey=46adc9b9781ce41307cb74b00a292648`,
+      `https://${
+        resource.split("//")[1]
+      }?apikey=46adc9b9781ce41307cb74b00a292648`,
       "GET"
     );
   },

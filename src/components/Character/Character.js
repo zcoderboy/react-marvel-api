@@ -5,7 +5,11 @@ const Character = ({ character }) => {
   return (
     <div className="d-flex flex-column align-items-center pr-4">
       <img
-        src={character.thumbnail.path + "/portrait_uncanny.jpg"}
+        src={
+          "https://" +
+          character.thumbnail.path.split("//")[1] +
+          "/portrait_uncanny.jpg"
+        }
         alt="character"
         className="character-img"
       />

@@ -17,7 +17,11 @@ export default function Comic({ comic }) {
       role="button"
     >
       <img
-        src={comic.thumbnail.path + "/portrait_uncanny.jpg"}
+        src={
+          "https://" +
+          comic.thumbnail.path.split("//")[1] +
+          "/portrait_uncanny.jpg"
+        }
         className="card-img-top comic-img"
         alt="..."
       />

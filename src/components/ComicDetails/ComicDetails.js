@@ -19,7 +19,7 @@ const ComicDetails = ({
       <div className="d-flex mt-5 details-wrapper">
         <div className="comic-img-detail shadow">
           <img
-            src={image + "/portrait_uncanny.jpg"}
+            src={"https://" + image.split("//")[1] + "/portrait_uncanny.jpg"}
             className="card-img-top rounded h-100"
             alt="..."
           />
