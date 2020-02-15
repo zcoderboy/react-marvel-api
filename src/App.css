@@ -9,7 +9,7 @@ body.dark {
   --background: #101e26;
   --color: #fff;
   --border-color: #fff;
-  --border-size: 0.05px;
+  --border-size: 1px;
 }
 
 body.light {

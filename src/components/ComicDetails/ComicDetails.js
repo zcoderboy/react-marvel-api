@@ -46,11 +46,13 @@ const ComicDetails = ({
                   <Character key={character.id} character={character} />
                 ))}
               </div>
-              <Link href="/" className="btn btn-outline-dark mt-4 back-button">
-                <i className="fa fa-arrow-left mr-2"></i>Head to homepage
-              </Link>
             </div>
           )}
+          <div className="characters-wrapper">
+            <Link href="/" className="btn btn-outline-dark mt-4 back-button">
+              <i className="fa fa-arrow-left mr-2"></i>Head to homepage
+            </Link>
+          </div>
         </div>
       </div>
     </div>
