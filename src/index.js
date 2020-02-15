@@ -5,6 +5,11 @@ import { Router, View } from "react-navi";
 import MarvelService from "./services/MarvelService";
 import App from "./App";
 import ComicDetails from "./components/ComicDetails/ComicDetails";
+import ReactGA from "react-ga";
+
+//Initializing Google Analytics
+ReactGA.initialize("UA-158586592-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const routes = mount({
   "/": route({

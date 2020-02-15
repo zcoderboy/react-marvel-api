@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import MarvelService from "../../services/MarvelService";
 import "./Search.css";
 import { Link } from "react-navi";
-// import ThemeContext from "../../ThemeContext";
 
 const Search = () => {
   const [comic, setComic] = useState("");
@@ -43,7 +42,6 @@ const Search = () => {
               onClick={() => {
                 setResult([]);
                 setComic("");
-                // document.getElementById("search").value = "";
               }}
             >
               {item.title.split("(")[0]}

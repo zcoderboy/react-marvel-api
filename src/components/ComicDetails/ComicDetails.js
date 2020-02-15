@@ -4,6 +4,11 @@ import Character from "../Character/Character";
 import Toggler from "../Toggler/Toggler";
 import Search from "../Search/Search";
 import { Link } from "react-navi";
+import ReactGA from "react-ga";
+
+//Initializing Google Analytics
+ReactGA.initialize("UA-158586592-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const ComicDetails = ({
   title,
