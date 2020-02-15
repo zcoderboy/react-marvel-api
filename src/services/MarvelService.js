@@ -9,9 +9,9 @@ async function asyncForEach(array, callback) {
 }
 
 const MarvelService = {
-  getCharacterByName: name => {
+  getComicByTitle: name => {
     return sendRequest(
-      `${BASE_URL}/characters?limit=5&nameStartsWith=${name}&apikey=46adc9b9781ce41307cb74b00a292648`,
+      `${BASE_URL}/comics?limit=5&titleStartsWith=${name}&apikey=46adc9b9781ce41307cb74b00a292648`,
       "GET"
     );
   },
@@ -37,7 +37,7 @@ const MarvelService = {
   },
   getComics: () => {
     return sendRequest(
-      `${BASE_URL}/comics?format=comic&dateRange=2010-01-01%2C2019-01-01&apikey=46adc9b9781ce41307cb74b00a292648`,
+      `${BASE_URL}/comics?format=comic&dateRange=2000-01-01%2C2019-01-01&apikey=46adc9b9781ce41307cb74b00a292648`,
       "GET"
     );
   },

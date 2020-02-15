@@ -12,6 +12,8 @@
   background-color: var(--background);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  /* background: linear-gradient(145deg, #ffffff, #dee7f3);
+  box-shadow: -5px -5px 25px #909192, 5px 5px 25px #fff; */
   transition: 0.4s;
 }
 @media only screen and (max-width: 480px) {

@@ -72,5 +72,9 @@ body.light {
   .display-4 {
     font-size: 2rem;
     margin-top: 1rem;
+    text-align: center !important;
+  }
+  .wrapper > div {
+    padding: 0 0.5rem;
   }
 }

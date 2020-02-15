@@ -13,7 +13,7 @@ const Character = ({ character }) => {
         alt="character"
         className="character-img"
       />
-      <span className="font-weight-bold mt-1">{character.name}</span>
+      {/* <span className="font-weight-bold mt-1">{character.name}</span> */}
     </div>
   );
 };

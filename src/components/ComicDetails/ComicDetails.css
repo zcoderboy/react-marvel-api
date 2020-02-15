@@ -1,5 +1,16 @@
 .comic-img-detail {
+  align-self: flex-start;
   flex-basis: 40%;
+}
+
+.comic-img-detail img {
+  object-fit: contain;
+}
+
+.back-button {
+  border-radius: 0px;
+  border-color: var(--color);
+  color: var(--color);
 }
 
 @media only screen and (max-width: 480px) {
@@ -26,7 +37,7 @@
     text-align: center;
   }
   p {
-    text-align: center;
+    text-align: justify;
     width: 80vw;
     margin: auto;
   }

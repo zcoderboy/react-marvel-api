@@ -11,7 +11,7 @@ const Toggler = ({ defaultMode }) => {
         onClick={changeMode}
         onKeyPress={changeMode}
         role="button"
-        tabIndex="0"
+        tabIndex="-1"
       ></div>
       <i className="fa fa-moon ml-3" />
     </div>
