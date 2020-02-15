@@ -19,8 +19,11 @@
   }
   .comic-img-detail {
     align-self: center;
-    width: 80vw;
+    width: 72vw;
     height: 400px;
+  }
+  .comic-img-detail img {
+    border-radius: 15px !important;
   }
   .display-3 {
     font-size: 2rem;
