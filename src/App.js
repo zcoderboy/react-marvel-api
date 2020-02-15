@@ -25,7 +25,7 @@ const App = () => {
     <div>
       <div className="d-flex justify-content-between">
         <Search />
-        <Toggler defaultMode="dark" />
+        <Toggler defaultMode="light" />
       </div>
       <h3 className="text-center mb-4 display-4 display-sm-3">Comic Books</h3>
       {comics.length == 0 && (
