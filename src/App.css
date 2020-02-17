@@ -58,10 +58,10 @@ body.light {
 @media only screen and (max-width: 480px) {
   .wrapper {
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
   }
   .carousel {
-    height: 70vh;
+    height: 80vh;
   }
   .carousel-cell {
     width: 70%;

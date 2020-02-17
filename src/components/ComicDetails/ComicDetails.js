@@ -22,7 +22,7 @@ const ComicDetails = ({
     <div className="details">
       <div className="d-flex justify-content-between">
         <Search />
-        <Toggler defaultMode="dark" />
+        <Toggler defaultMode="light" />
       </div>
       <div className="d-flex mt-5 details-wrapper">
         <div className="comic-img-detail shadow">
@@ -53,7 +53,7 @@ const ComicDetails = ({
               </div>
             </div>
           )}
-          <div className="characters-wrapper">
+          <div className="characters-wrapper mb-3">
             <Link href="/" className="btn btn-outline-dark mt-4 back-button">
               <i className="fa fa-arrow-left mr-2"></i>Head to homepage
             </Link>
